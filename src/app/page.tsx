@@ -15,15 +15,13 @@ export default function page() {
   const [prompt, setPrompt] = useState<string>("");
   const [chats, setChats] = useState<any>([]);
 
-  const handleSubmit = async (
-    e: any
-  ) => {
+  const handleSubmit = async (e: any) => {
 
     // Scroll to bottom of page
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    e.preventDefault();
+    e.preventDefault(); // Prevent page from refreshing when a form submit event is triggered
     
-    setPrompt(""); // Immediately clear input
+    setPrompt(""); // Immediately clear input after a message is sent
 
     const newChat = { role: "user", message: prompt };
     setChats([...chats, newChat]);
@@ -39,6 +37,7 @@ export default function page() {
       
       const data = await response.json();
       const systemResponse = { role: "system", message: data.message };
+      
       setChats([...chats, newChat, systemResponse]);
       setPrompt("");
     } 

@@ -40,8 +40,8 @@ export async function POST(request: Request) {
         }
     } 
     // Handle error if prompt is not present on request body
-    catch (error) {
-        console.error(error)
+    catch (error: any) {
+        console.error(error);
         return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
     }
 }
