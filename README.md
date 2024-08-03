@@ -1,2 +1,5 @@
 # nextjs-ai-chatbot
 Next JS AI Chatbot
+
+## Preview
+<img width="1509" alt="Screenshot 2024-08-04 at 1 01 12 AM" src="https://github.com/user-attachments/assets/6ffdd784-79c4-406c-809d-0b11a6caaee1">
